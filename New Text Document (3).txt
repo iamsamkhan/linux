@@ -1,0 +1,265 @@
+   https://github.com/iamsamkhan
+ 9  mkdir pepsi 
+   10  ls -ld pepsi 
+   11  chmod u-x,g+w,o=r pepsi 
+   12  ls -ld pepsi 
+   13  chmod -R u-x,g+w,o=r pepsi 
+   14  chmod a=rwx pepsi 
+   15  ls -ld pepsi 
+   16  chmod -R a=rwx pepsi 
+   17  chmod 755 pepsi 
+   18  ls -ld pepsi 
+   19  chmod -R 755 pepsi 
+   20  ls -ld pepsi 
+   21  chmod u-x pepsi 
+   22  cd pepsi 
+   23  touch f1 
+   24  exit
+   25  chmod -x pepsi 
+   26  ls -l 
+   27  cd pepsi 
+   28  touch f2 
+   29  ls -l 
+   30  cd .. 
+   31  chmod u-w pepsi 
+   32  ls -ld pepsi 
+   33  cd pepsi 
+   34  touch f3 
+   35  ls -l 
+   36  cd
+   37  history 
+
+   9  mkdir pepsi 
+   10  ls -ld pepsi 
+   11  useradd prasad
+   12  chown prasad pepsi 
+   13  ls -ld pepsi 
+   14  chown -R prasad pepsi 
+   15  useradd u1 
+   16  useradd u2 
+   17  groupadd redhat 
+   18  usermod -ag redhat u1 
+   19  usermod -aG redhat u1 
+   20  usermod -aG redhat u2 
+   21  id u1 
+   22  id u2 
+   23  ls -ld pepsi 
+   24  chgrp redhat pepsi 
+   25  ls -ld pepsi 
+   26  cd pepsi 
+   27  su u1 
+   28  su u2 
+   29  cd
+   30  ls -ld pepsi 
+   31  chmod g+w pepsi 
+   32  ls -ld pepsi 
+   33  cd pepsi 
+   34  su u1 
+   35  su u2 
+   36  cd
+   37  chgrp -R redhat pepsi 
+   38  mkdir dir1 
+   39  ls -ld dir1 
+   40  chown prasad:redhat dir1 
+   41  ls -ld dir1 
+   42  which fdisk 
+   43  whereis fdik 
+   44  whereis fdisk 
+   45  ls -l /sbin/fdisk 
+   46  fdisk -l 
+   47  exit
+   48  ls -l /sbin/fdisk 
+   49  chmod u+s /sbin/fdisk 
+   50  ls -l /sbin/fdisk 
+   51  exit
+   52  mkdir oppo 
+   53  ls -ld oppo 
+   54  useradd i1 
+   55  useradd i2 
+   56  groupadd rhel 
+   57  usermod -aG rhel i1 
+   58  usermod -aG rhel i2 
+   59  id i1 
+   60  id i2 
+   61  chgrp rhel oppo 
+   62  ls -ld oppo 
+   63  chmod g+w oppo 
+   64  ls -ld oppo 
+   65  cd oppo 
+   66  su i1 
+   67  su i2 
+   68  cd
+   69  chmod g+s oppo 
+   70  ls -ld oppo 
+   71  cd oppo 
+   72  su i1 
+   73  cd
+   74  mkdir nokia 
+   75  ls -ld nokia 
+   76  cd nokia 
+   77  su ui1 
+   78  su i1 
+   79  cd
+   80  chmod o+w nokia 
+   81  ls -ld nokia 
+   82  cd nokia 
+   83  su u1 
+   84  su u2 
+   85  cd
+   86  chmod o+t nokia 
+   87  ls -ld nokia 
+   88  cd nokia 
+   89  su u1 
+   90  su u2 
+   91  cd
+   92  ls -ld nokia 
+   93  history 
+
+  9  mkdir oppo 
+   10  ls -ld oppo 
+   11  getfacl oppo 
+   12  useradd Himanshu  
+   13  useradd Balaji 
+   14  useradd u1 
+   15  useradd Jafar  
+   16  useradd Netaji  
+   17  groupadd rhel 
+   18  usermod -aG rhel Jafar 
+   19  usermod -aG rhel Netaji 
+   20  id Jafar 
+   21  is Netaji 
+   22  id Netaji 
+   23  setfacl -m u:Balaji:rwx,g:rhel:rwx,o::r-- oppo 
+   24  ls -ld oppo 
+   25  getfacl oppo 
+   26  history 
+   27  ls -ld oppo 
+   28  getfacl oppo 
+   29  cd oppo 
+   30  su Balaji 
+   31  su jafar 
+   32  su Jafar 
+   33  su u1 
+   34  cd
+   35  cd oppo 
+   36  ls -l 
+   37  cd
+   38  setfacl -R -m u:Balaji:rwx,g:rhel:rwx,o::r-- oppo 
+   39  cd oppo 
+   40  ls -l 
+   41  getfacl file1 
+   42  cd
+   43  getfacl oppo 
+   44  setfacl -m m::r-- oppo 
+   45  getfacl oppo 
+   46  cd oppo 
+   47  su Balaji 
+   48  cd
+   49  setfacl -m m::rwx oppo 
+   50  getfacl oppo 
+   51  history 
+   52  cd oppo 
+   53  su Balaji 
+   54  cd
+   55  setfacl -m d:u:dolly:rwx oppo 
+   56  getfacl oppo 
+   57  cd oppo 
+   58  su Jafar 
+   59  su Himanshu 
+   60  cd j1 
+   61  su Himanshu 
+   62  cd
+   63  mkdir redbull 
+   64  getfacl redbull 
+   65  ls -ld redbull 
+   66  getfacl oppo 
+   67  getfacl oppo | setfacl --set-file=- redbull 
+   68  ls -ld redbull 
+   69  getfacl redbull 
+   70  getfacl oppo 
+   71  setfacl -x u:Balaji oppo 
+   72  getfacl oppo 
+   73  setfacl -x g:rhel oppo 
+   74  getfacl oppo 
+   75  setfacl -b oppo 
+   76  getfacl oppo 
+   77  ls -ld oppo 
+   78  history 
+
+ 37  uptime 
+   38  grep "model name" /proc/cpuinfo 
+   39  top 
+   40  ps aux 
+   41  ps axo pid,comm,nice --sort=nice 
+   42  ps ao pid,comm,nice --sort=nice 
+   43  sleep 10000 & 
+   44  ps ao pid,comm,nice --sort=nice 
+   45  nice -n 19 gedit file1 & 
+   46  jobs 
+   47  ps ao pid,comm,nice --sort=nice 
+   48  renice -n -20 4394 
+   49  ps ao pid,comm,nice --sort=nice 
+   50  ps aux 
+   51  ps ao pid,comm,nice --sort=nice 
+   52  renice -n 19 4375 
+   53  ps aux 
+   54  ps ao pid,ppid,sid,gid 
+   55  kill -15 3774 
+   56  kill -9 3774 
+   57  ps ao sid,ppid,pid 
+   58  ps ao sid,ppid,pid,comm  
+   59  history 
+
+  9  systemctl 
+   10  systemctl --type=service 
+   11  systemctl --type=service --all 
+   12  systemctl --all 
+   13  systemctl 
+   14  systemctl --type=target 
+   15  systemctl --type=service 
+   16  systemctl --type=service --all 
+   17  systemctl list-unit-files 
+   18  systemctl | grep sshd 
+   19  systemctl status sshd.service 
+   20  systemctl stop sshd.service 
+   21  systemctl status sshd.service 
+   22  systemctl start sshd.service 
+   23  systemctl status sshd.service 
+   24  systemctl restart sshd.service 
+   25  systemctl status sshd.service 
+   26  systemctl reload sshd.service 
+   27  systemctl status sshd.service 
+   28  systemctl is-active sshd.service 
+   29  systemctl is-enabled sshd.service 
+   30  systemctl stop sshd.service 
+   31  systemctl status sshd.service 
+   32  reboot 
+   33  systemctl status sshd.service 
+   34  systemctl disable sshd.service 
+   35  systemctl status sshd.service 
+   36  reboot 
+   37  systemctl status sshd 
+   38  systemctl enable sshd
+   39  reboot 
+   40  systemctl status sshd.service 
+   41  systemctl status firewalld.service 
+   42  systemctl mask firewalld.service 
+   43  systemctl status firewalld.service 
+   44  systemctl stop firewalld.service 
+   45  systemctl status firewalld.service 
+   46  systemctl start firewalld.service 
+   47  reboot 
+   48  systemctl status firewalld.service 
+   49  systemctl unmask firewalld.service 
+   50  systemctl status firewalld.service 
+   51  reboot 
+   52  systemctl status firewalld.service 
+   53  systemctl list-dependencies sshd.service 
+   54  service sshd status 
+   55  service sshd start 
+   56  service sshd stop 
+   57  history 
+
+
+
+
